@@ -23,3 +23,7 @@ jobs:
     - name: Sync files to S3
       run: |
         aws s3 sync ./ s3://coffee-shop-site-demo-0 --delete --acl public-read
+        --delete \
+            --acl public-read \
+            --exclude ".git/*" \
+            --exclude ".github/*"
