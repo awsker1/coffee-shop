@@ -22,5 +22,5 @@ jobs:
 
     - name: Sync files to S3
       run: |
-        aws s3 sync ./ s3://coffee-shop-site-demo-0
+        aws s3 sync site/ s3://coffee-shop-site-demo-0 --delete
    
